@@ -1,0 +1,13 @@
+D:\DevConSchool\HomeWork\HomeWork1\SynonymsService\bin\Release\SynonymsService.dll
+D:\DevConSchool\HomeWork\HomeWork1\SynonymsService\bin\Release\SynonymsService.pdb
+D:\DevConSchool\HomeWork\HomeWork1\SynonymsService\bin\Release\Flurl.dll
+D:\DevConSchool\HomeWork\HomeWork1\SynonymsService\bin\Release\Flurl.Http.dll
+D:\DevConSchool\HomeWork\HomeWork1\SynonymsService\bin\Release\Newtonsoft.Json.dll
+D:\DevConSchool\HomeWork\HomeWork1\SynonymsService\bin\Release\Flurl.pdb
+D:\DevConSchool\HomeWork\HomeWork1\SynonymsService\bin\Release\Flurl.xml
+D:\DevConSchool\HomeWork\HomeWork1\SynonymsService\bin\Release\Flurl.Http.pdb
+D:\DevConSchool\HomeWork\HomeWork1\SynonymsService\bin\Release\Flurl.Http.xml
+D:\DevConSchool\HomeWork\HomeWork1\SynonymsService\bin\Release\Newtonsoft.Json.xml
+D:\DevConSchool\HomeWork\HomeWork1\SynonymsService\obj\Release\SynonymsService.csprojResolveAssemblyReference.cache
+D:\DevConSchool\HomeWork\HomeWork1\SynonymsService\obj\Release\SynonymsService.dll
+D:\DevConSchool\HomeWork\HomeWork1\SynonymsService\obj\Release\SynonymsService.pdb

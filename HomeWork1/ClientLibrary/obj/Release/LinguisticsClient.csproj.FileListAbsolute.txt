@@ -1,0 +1,7 @@
+D:\DevConSchool\HomeWork\HomeWork1\ClientLibrary\bin\Release\Microsoft.ProjectOxford.Linguistics.dll
+D:\DevConSchool\HomeWork\HomeWork1\ClientLibrary\bin\Release\Microsoft.ProjectOxford.Linguistics.pdb
+D:\DevConSchool\HomeWork\HomeWork1\ClientLibrary\bin\Release\Newtonsoft.Json.dll
+D:\DevConSchool\HomeWork\HomeWork1\ClientLibrary\bin\Release\Newtonsoft.Json.xml
+D:\DevConSchool\HomeWork\HomeWork1\ClientLibrary\obj\Release\LinguisticsClient.csprojResolveAssemblyReference.cache
+D:\DevConSchool\HomeWork\HomeWork1\ClientLibrary\obj\Release\Microsoft.ProjectOxford.Linguistics.dll
+D:\DevConSchool\HomeWork\HomeWork1\ClientLibrary\obj\Release\Microsoft.ProjectOxford.Linguistics.pdb

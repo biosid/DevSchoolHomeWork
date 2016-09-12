@@ -1,0 +1,12 @@
+D:\DevConSchool\HomeWork\HomeWork1\SynonymsService\bin\Debug\SynonymsService.dll
+D:\DevConSchool\HomeWork\HomeWork1\SynonymsService\bin\Debug\SynonymsService.pdb
+D:\DevConSchool\HomeWork\HomeWork1\SynonymsService\obj\Debug\SynonymsService.dll
+D:\DevConSchool\HomeWork\HomeWork1\SynonymsService\obj\Debug\SynonymsService.pdb
+D:\DevConSchool\HomeWork\HomeWork1\SynonymsService\bin\Debug\Flurl.dll
+D:\DevConSchool\HomeWork\HomeWork1\SynonymsService\bin\Debug\Flurl.Http.dll
+D:\DevConSchool\HomeWork\HomeWork1\SynonymsService\bin\Debug\Newtonsoft.Json.dll
+D:\DevConSchool\HomeWork\HomeWork1\SynonymsService\bin\Debug\Flurl.pdb
+D:\DevConSchool\HomeWork\HomeWork1\SynonymsService\bin\Debug\Flurl.xml
+D:\DevConSchool\HomeWork\HomeWork1\SynonymsService\bin\Debug\Flurl.Http.pdb
+D:\DevConSchool\HomeWork\HomeWork1\SynonymsService\bin\Debug\Flurl.Http.xml
+D:\DevConSchool\HomeWork\HomeWork1\SynonymsService\bin\Debug\Newtonsoft.Json.xml

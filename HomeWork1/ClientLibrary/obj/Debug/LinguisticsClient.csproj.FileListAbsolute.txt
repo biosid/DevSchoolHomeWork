@@ -1,0 +1,6 @@
+D:\DevConSchool\HomeWork\HomeWork1\ClientLibrary\bin\Debug\Microsoft.ProjectOxford.Linguistics.dll
+D:\DevConSchool\HomeWork\HomeWork1\ClientLibrary\bin\Debug\Microsoft.ProjectOxford.Linguistics.pdb
+D:\DevConSchool\HomeWork\HomeWork1\ClientLibrary\bin\Debug\Newtonsoft.Json.dll
+D:\DevConSchool\HomeWork\HomeWork1\ClientLibrary\bin\Debug\Newtonsoft.Json.xml
+D:\DevConSchool\HomeWork\HomeWork1\ClientLibrary\obj\Debug\Microsoft.ProjectOxford.Linguistics.dll
+D:\DevConSchool\HomeWork\HomeWork1\ClientLibrary\obj\Debug\Microsoft.ProjectOxford.Linguistics.pdb

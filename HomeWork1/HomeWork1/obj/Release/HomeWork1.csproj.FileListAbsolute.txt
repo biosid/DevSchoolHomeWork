@@ -1,0 +1,49 @@
+D:\DevConSchool\HomeWork\HomeWork1\HomeWork1\bin\Bot Application1.dll.config
+D:\DevConSchool\HomeWork\HomeWork1\HomeWork1\bin\Bot Application1.dll
+D:\DevConSchool\HomeWork\HomeWork1\HomeWork1\bin\Bot Application1.pdb
+D:\DevConSchool\HomeWork\HomeWork1\HomeWork1\bin\Autofac.dll
+D:\DevConSchool\HomeWork\HomeWork1\HomeWork1\bin\Chronic.dll
+D:\DevConSchool\HomeWork\HomeWork1\HomeWork1\bin\Microsoft.Bot.Builder.dll
+D:\DevConSchool\HomeWork\HomeWork1\HomeWork1\bin\Microsoft.Bot.Connector.dll
+D:\DevConSchool\HomeWork\HomeWork1\HomeWork1\bin\Microsoft.IdentityModel.Protocol.Extensions.dll
+D:\DevConSchool\HomeWork\HomeWork1\HomeWork1\bin\Microsoft.Rest.ClientRuntime.dll
+D:\DevConSchool\HomeWork\HomeWork1\HomeWork1\bin\Microsoft.WindowsAzure.Configuration.dll
+D:\DevConSchool\HomeWork\HomeWork1\HomeWork1\bin\Newtonsoft.Json.dll
+D:\DevConSchool\HomeWork\HomeWork1\HomeWork1\bin\System.IdentityModel.Tokens.Jwt.dll
+D:\DevConSchool\HomeWork\HomeWork1\HomeWork1\bin\System.Net.Http.Formatting.dll
+D:\DevConSchool\HomeWork\HomeWork1\HomeWork1\bin\System.Web.Http.dll
+D:\DevConSchool\HomeWork\HomeWork1\HomeWork1\bin\System.Web.Http.WebHost.dll
+D:\DevConSchool\HomeWork\HomeWork1\HomeWork1\bin\Autofac.xml
+D:\DevConSchool\HomeWork\HomeWork1\HomeWork1\bin\Microsoft.Bot.Builder.xml
+D:\DevConSchool\HomeWork\HomeWork1\HomeWork1\bin\Microsoft.Bot.Connector.xml
+D:\DevConSchool\HomeWork\HomeWork1\HomeWork1\bin\Microsoft.IdentityModel.Protocol.Extensions.pdb
+D:\DevConSchool\HomeWork\HomeWork1\HomeWork1\bin\Microsoft.IdentityModel.Protocol.Extensions.xml
+D:\DevConSchool\HomeWork\HomeWork1\HomeWork1\bin\Microsoft.Rest.ClientRuntime.xml
+D:\DevConSchool\HomeWork\HomeWork1\HomeWork1\bin\Microsoft.WindowsAzure.Configuration.xml
+D:\DevConSchool\HomeWork\HomeWork1\HomeWork1\bin\Newtonsoft.Json.xml
+D:\DevConSchool\HomeWork\HomeWork1\HomeWork1\bin\System.IdentityModel.Tokens.Jwt.pdb
+D:\DevConSchool\HomeWork\HomeWork1\HomeWork1\bin\System.IdentityModel.Tokens.Jwt.xml
+D:\DevConSchool\HomeWork\HomeWork1\HomeWork1\bin\System.Net.Http.Formatting.xml
+D:\DevConSchool\HomeWork\HomeWork1\HomeWork1\bin\System.Web.Http.xml
+D:\DevConSchool\HomeWork\HomeWork1\HomeWork1\bin\System.Web.Http.WebHost.xml
+D:\DevConSchool\HomeWork\HomeWork1\HomeWork1\bin\ar\Microsoft.Bot.Builder.resources.dll
+D:\DevConSchool\HomeWork\HomeWork1\HomeWork1\bin\en\Microsoft.Bot.Builder.resources.dll
+D:\DevConSchool\HomeWork\HomeWork1\HomeWork1\bin\es\Microsoft.Bot.Builder.resources.dll
+D:\DevConSchool\HomeWork\HomeWork1\HomeWork1\bin\fa\Microsoft.Bot.Builder.resources.dll
+D:\DevConSchool\HomeWork\HomeWork1\HomeWork1\bin\fr\Microsoft.Bot.Builder.resources.dll
+D:\DevConSchool\HomeWork\HomeWork1\HomeWork1\bin\ja\Microsoft.Bot.Builder.resources.dll
+D:\DevConSchool\HomeWork\HomeWork1\HomeWork1\bin\ru\Microsoft.Bot.Builder.resources.dll
+D:\DevConSchool\HomeWork\HomeWork1\HomeWork1\bin\zh-hans\Microsoft.Bot.Builder.resources.dll
+D:\DevConSchool\HomeWork\HomeWork1\HomeWork1\obj\Release\HomeWork1.csprojResolveAssemblyReference.cache
+D:\DevConSchool\HomeWork\HomeWork1\HomeWork1\obj\Release\Bot Application1.dll
+D:\DevConSchool\HomeWork\HomeWork1\HomeWork1\obj\Release\Bot Application1.pdb
+D:\DevConSchool\HomeWork\HomeWork1\HomeWork1\bin\Microsoft.ProjectOxford.Linguistics.dll
+D:\DevConSchool\HomeWork\HomeWork1\HomeWork1\bin\SynonymsService.dll
+D:\DevConSchool\HomeWork\HomeWork1\HomeWork1\bin\Flurl.Http.dll
+D:\DevConSchool\HomeWork\HomeWork1\HomeWork1\bin\Flurl.dll
+D:\DevConSchool\HomeWork\HomeWork1\HomeWork1\bin\Microsoft.ProjectOxford.Linguistics.pdb
+D:\DevConSchool\HomeWork\HomeWork1\HomeWork1\bin\SynonymsService.pdb
+D:\DevConSchool\HomeWork\HomeWork1\HomeWork1\bin\Flurl.Http.pdb
+D:\DevConSchool\HomeWork\HomeWork1\HomeWork1\bin\Flurl.Http.xml
+D:\DevConSchool\HomeWork\HomeWork1\HomeWork1\bin\Flurl.pdb
+D:\DevConSchool\HomeWork\HomeWork1\HomeWork1\bin\Flurl.xml
