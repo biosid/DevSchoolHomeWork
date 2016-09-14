@@ -1,0 +1,858 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props" Condition="Exists('..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{AC462A03-4758-456C-8CDD-AB3E9B72CD3B}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>HomeWork2</RootNamespace>
+    <AssemblyName>HomeWork2</AssemblyName>
+    <TargetFrameworkVersion>v4.6.2</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.ProjectOxford.Common, Version=1.0.308.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ProjectOxford.Common.1.0.308\lib\portable-net45+win+wpa81+wp80+MonoAndroid10+xamarinios10+MonoTouch10\Microsoft.ProjectOxford.Common.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.ProjectOxford.Emotion, Version=1.0.331.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ProjectOxford.Emotion.1.0.331\lib\portable-net45+win+wpa81+wp80+MonoAndroid10+xamarinios10+MonoTouch10\Microsoft.ProjectOxford.Emotion.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.ProjectOxford.Face, Version=1.2.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ProjectOxford.Face.1.2.1\lib\portable-net45+wp80+win8+wpa81+aspnetcore50\Microsoft.ProjectOxford.Face.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.ProjectOxford.Vision, Version=1.0.370.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ProjectOxford.Vision.1.0.370\lib\portable-net45+win+wpa81+wp80+MonoAndroid10+xamarinios10+MonoTouch10\Microsoft.ProjectOxford.Vision.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=9.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.9.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http.Extensions, Version=2.2.29.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Net.Http.2.2.29\lib\net45\System.Net.Http.Extensions.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Net.Http.Primitives, Version=4.2.29.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Net.Http.2.2.29\lib\net45\System.Net.Http.Primitives.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+    </Reference>
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.3\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.3\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="WebGrease">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.5.2\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime">
+      <Private>True</Private>
+      <HintPath>..\packages\Antlr.3.4.1.9004\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Core">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Core.2.2.1\lib\net45\Microsoft.AspNet.Identity.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Owin">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Owin.2.2.1\lib\net45\Microsoft.AspNet.Identity.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.EntityFramework">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.EntityFramework.2.2.1\lib\net45\Microsoft.AspNet.Identity.EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="Owin">
+      <HintPath>..\packages\Owin.1.0\lib\net40\Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin">
+      <HintPath>..\packages\Microsoft.Owin.3.0.1\lib\net45\Microsoft.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Host.SystemWeb">
+      <HintPath>..\packages\Microsoft.Owin.Host.SystemWeb.3.0.1\lib\net45\Microsoft.Owin.Host.SystemWeb.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security">
+      <HintPath>..\packages\Microsoft.Owin.Security.3.0.1\lib\net45\Microsoft.Owin.Security.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Facebook">
+      <HintPath>..\packages\Microsoft.Owin.Security.Facebook.3.0.1\lib\net45\Microsoft.Owin.Security.Facebook.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Cookies">
+      <HintPath>..\packages\Microsoft.Owin.Security.Cookies.3.0.1\lib\net45\Microsoft.Owin.Security.Cookies.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.OAuth">
+      <HintPath>..\packages\Microsoft.Owin.Security.OAuth.3.0.1\lib\net45\Microsoft.Owin.Security.OAuth.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Google">
+      <HintPath>..\packages\Microsoft.Owin.Security.Google.3.0.1\lib\net45\Microsoft.Owin.Security.Google.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Twitter">
+      <HintPath>..\packages\Microsoft.Owin.Security.Twitter.3.0.1\lib\net45\Microsoft.Owin.Security.Twitter.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.MicrosoftAccount">
+      <HintPath>..\packages\Microsoft.Owin.Security.MicrosoftAccount.3.0.1\lib\net45\Microsoft.Owin.Security.MicrosoftAccount.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\IdentityConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="App_Start\Startup.Auth.cs" />
+    <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\IdentityModels.cs" />
+    <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Startup.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\images\out10.png" />
+    <Content Include="Content\images\out100.png" />
+    <Content Include="Content\images\out101.png" />
+    <Content Include="Content\images\out102.png" />
+    <Content Include="Content\images\out103.png" />
+    <Content Include="Content\images\out104.png" />
+    <Content Include="Content\images\out105.png" />
+    <Content Include="Content\images\out106.png" />
+    <Content Include="Content\images\out107.png" />
+    <Content Include="Content\images\out108.png" />
+    <Content Include="Content\images\out109.png" />
+    <Content Include="Content\images\out11.png" />
+    <Content Include="Content\images\out110.png" />
+    <Content Include="Content\images\out111.png" />
+    <Content Include="Content\images\out112.png" />
+    <Content Include="Content\images\out113.png" />
+    <Content Include="Content\images\out114.png" />
+    <Content Include="Content\images\out115.png" />
+    <Content Include="Content\images\out116.png" />
+    <Content Include="Content\images\out117.png" />
+    <Content Include="Content\images\out118.png" />
+    <Content Include="Content\images\out119.png" />
+    <Content Include="Content\images\out12.png" />
+    <Content Include="Content\images\out120.png" />
+    <Content Include="Content\images\out121.png" />
+    <Content Include="Content\images\out122.png" />
+    <Content Include="Content\images\out123.png" />
+    <Content Include="Content\images\out124.png" />
+    <Content Include="Content\images\out125.png" />
+    <Content Include="Content\images\out126.png" />
+    <Content Include="Content\images\out127.png" />
+    <Content Include="Content\images\out128.png" />
+    <Content Include="Content\images\out129.png" />
+    <Content Include="Content\images\out13.png" />
+    <Content Include="Content\images\out130.png" />
+    <Content Include="Content\images\out131.png" />
+    <Content Include="Content\images\out132.png" />
+    <Content Include="Content\images\out133.png" />
+    <Content Include="Content\images\out134.png" />
+    <Content Include="Content\images\out135.png" />
+    <Content Include="Content\images\out136.png" />
+    <Content Include="Content\images\out137.png" />
+    <Content Include="Content\images\out138.png" />
+    <Content Include="Content\images\out139.png" />
+    <Content Include="Content\images\out14.png" />
+    <Content Include="Content\images\out140.png" />
+    <Content Include="Content\images\out141.png" />
+    <Content Include="Content\images\out142.png" />
+    <Content Include="Content\images\out143.png" />
+    <Content Include="Content\images\out144.png" />
+    <Content Include="Content\images\out145.png" />
+    <Content Include="Content\images\out146.png" />
+    <Content Include="Content\images\out147.png" />
+    <Content Include="Content\images\out148.png" />
+    <Content Include="Content\images\out149.png" />
+    <Content Include="Content\images\out15.png" />
+    <Content Include="Content\images\out150.png" />
+    <Content Include="Content\images\out151.png" />
+    <Content Include="Content\images\out152.png" />
+    <Content Include="Content\images\out153.png" />
+    <Content Include="Content\images\out154.png" />
+    <Content Include="Content\images\out155.png" />
+    <Content Include="Content\images\out156.png" />
+    <Content Include="Content\images\out157.png" />
+    <Content Include="Content\images\out158.png" />
+    <Content Include="Content\images\out159.png" />
+    <Content Include="Content\images\out16.png" />
+    <Content Include="Content\images\out160.png" />
+    <Content Include="Content\images\out161.png" />
+    <Content Include="Content\images\out162.png" />
+    <Content Include="Content\images\out163.png" />
+    <Content Include="Content\images\out164.png" />
+    <Content Include="Content\images\out165.png" />
+    <Content Include="Content\images\out166.png" />
+    <Content Include="Content\images\out167.png" />
+    <Content Include="Content\images\out168.png" />
+    <Content Include="Content\images\out169.png" />
+    <Content Include="Content\images\out17.png" />
+    <Content Include="Content\images\out170.png" />
+    <Content Include="Content\images\out171.png" />
+    <Content Include="Content\images\out172.png" />
+    <Content Include="Content\images\out173.png" />
+    <Content Include="Content\images\out174.png" />
+    <Content Include="Content\images\out175.png" />
+    <Content Include="Content\images\out176.png" />
+    <Content Include="Content\images\out177.png" />
+    <Content Include="Content\images\out178.png" />
+    <Content Include="Content\images\out179.png" />
+    <Content Include="Content\images\out18.png" />
+    <Content Include="Content\images\out180.png" />
+    <Content Include="Content\images\out181.png" />
+    <Content Include="Content\images\out182.png" />
+    <Content Include="Content\images\out183.png" />
+    <Content Include="Content\images\out184.png" />
+    <Content Include="Content\images\out185.png" />
+    <Content Include="Content\images\out186.png" />
+    <Content Include="Content\images\out187.png" />
+    <Content Include="Content\images\out188.png" />
+    <Content Include="Content\images\out189.png" />
+    <Content Include="Content\images\out19.png" />
+    <Content Include="Content\images\out190.png" />
+    <Content Include="Content\images\out191.png" />
+    <Content Include="Content\images\out192.png" />
+    <Content Include="Content\images\out193.png" />
+    <Content Include="Content\images\out194.png" />
+    <Content Include="Content\images\out195.png" />
+    <Content Include="Content\images\out196.png" />
+    <Content Include="Content\images\out197.png" />
+    <Content Include="Content\images\out198.png" />
+    <Content Include="Content\images\out199.png" />
+    <Content Include="Content\images\out20.png" />
+    <Content Include="Content\images\out200.png" />
+    <Content Include="Content\images\out201.png" />
+    <Content Include="Content\images\out202.png" />
+    <Content Include="Content\images\out203.png" />
+    <Content Include="Content\images\out204.png" />
+    <Content Include="Content\images\out205.png" />
+    <Content Include="Content\images\out206.png" />
+    <Content Include="Content\images\out207.png" />
+    <Content Include="Content\images\out208.png" />
+    <Content Include="Content\images\out209.png" />
+    <Content Include="Content\images\out21.png" />
+    <Content Include="Content\images\out210.png" />
+    <Content Include="Content\images\out211.png" />
+    <Content Include="Content\images\out212.png" />
+    <Content Include="Content\images\out213.png" />
+    <Content Include="Content\images\out214.png" />
+    <Content Include="Content\images\out215.png" />
+    <Content Include="Content\images\out216.png" />
+    <Content Include="Content\images\out217.png" />
+    <Content Include="Content\images\out218.png" />
+    <Content Include="Content\images\out219.png" />
+    <Content Include="Content\images\out22.png" />
+    <Content Include="Content\images\out220.png" />
+    <Content Include="Content\images\out221.png" />
+    <Content Include="Content\images\out222.png" />
+    <Content Include="Content\images\out223.png" />
+    <Content Include="Content\images\out224.png" />
+    <Content Include="Content\images\out225.png" />
+    <Content Include="Content\images\out226.png" />
+    <Content Include="Content\images\out227.png" />
+    <Content Include="Content\images\out228.png" />
+    <Content Include="Content\images\out229.png" />
+    <Content Include="Content\images\out23.png" />
+    <Content Include="Content\images\out230.png" />
+    <Content Include="Content\images\out231.png" />
+    <Content Include="Content\images\out232.png" />
+    <Content Include="Content\images\out233.png" />
+    <Content Include="Content\images\out234.png" />
+    <Content Include="Content\images\out235.png" />
+    <Content Include="Content\images\out236.png" />
+    <Content Include="Content\images\out237.png" />
+    <Content Include="Content\images\out238.png" />
+    <Content Include="Content\images\out239.png" />
+    <Content Include="Content\images\out24.png" />
+    <Content Include="Content\images\out240.png" />
+    <Content Include="Content\images\out241.png" />
+    <Content Include="Content\images\out242.png" />
+    <Content Include="Content\images\out243.png" />
+    <Content Include="Content\images\out244.png" />
+    <Content Include="Content\images\out245.png" />
+    <Content Include="Content\images\out246.png" />
+    <Content Include="Content\images\out247.png" />
+    <Content Include="Content\images\out248.png" />
+    <Content Include="Content\images\out249.png" />
+    <Content Include="Content\images\out25.png" />
+    <Content Include="Content\images\out250.png" />
+    <Content Include="Content\images\out251.png" />
+    <Content Include="Content\images\out252.png" />
+    <Content Include="Content\images\out253.png" />
+    <Content Include="Content\images\out254.png" />
+    <Content Include="Content\images\out255.png" />
+    <Content Include="Content\images\out256.png" />
+    <Content Include="Content\images\out257.png" />
+    <Content Include="Content\images\out258.png" />
+    <Content Include="Content\images\out259.png" />
+    <Content Include="Content\images\out26.png" />
+    <Content Include="Content\images\out260.png" />
+    <Content Include="Content\images\out261.png" />
+    <Content Include="Content\images\out262.png" />
+    <Content Include="Content\images\out263.png" />
+    <Content Include="Content\images\out264.png" />
+    <Content Include="Content\images\out265.png" />
+    <Content Include="Content\images\out266.png" />
+    <Content Include="Content\images\out267.png" />
+    <Content Include="Content\images\out268.png" />
+    <Content Include="Content\images\out269.png" />
+    <Content Include="Content\images\out27.png" />
+    <Content Include="Content\images\out270.png" />
+    <Content Include="Content\images\out271.png" />
+    <Content Include="Content\images\out272.png" />
+    <Content Include="Content\images\out273.png" />
+    <Content Include="Content\images\out274.png" />
+    <Content Include="Content\images\out275.png" />
+    <Content Include="Content\images\out276.png" />
+    <Content Include="Content\images\out277.png" />
+    <Content Include="Content\images\out278.png" />
+    <Content Include="Content\images\out279.png" />
+    <Content Include="Content\images\out28.png" />
+    <Content Include="Content\images\out280.png" />
+    <Content Include="Content\images\out281.png" />
+    <Content Include="Content\images\out282.png" />
+    <Content Include="Content\images\out283.png" />
+    <Content Include="Content\images\out284.png" />
+    <Content Include="Content\images\out285.png" />
+    <Content Include="Content\images\out286.png" />
+    <Content Include="Content\images\out287.png" />
+    <Content Include="Content\images\out288.png" />
+    <Content Include="Content\images\out289.png" />
+    <Content Include="Content\images\out29.png" />
+    <Content Include="Content\images\out290.png" />
+    <Content Include="Content\images\out291.png" />
+    <Content Include="Content\images\out292.png" />
+    <Content Include="Content\images\out293.png" />
+    <Content Include="Content\images\out294.png" />
+    <Content Include="Content\images\out295.png" />
+    <Content Include="Content\images\out296.png" />
+    <Content Include="Content\images\out297.png" />
+    <Content Include="Content\images\out298.png" />
+    <Content Include="Content\images\out299.png" />
+    <Content Include="Content\images\out30.png" />
+    <Content Include="Content\images\out300.png" />
+    <Content Include="Content\images\out301.png" />
+    <Content Include="Content\images\out302.png" />
+    <Content Include="Content\images\out303.png" />
+    <Content Include="Content\images\out304.png" />
+    <Content Include="Content\images\out305.png" />
+    <Content Include="Content\images\out306.png" />
+    <Content Include="Content\images\out307.png" />
+    <Content Include="Content\images\out308.png" />
+    <Content Include="Content\images\out309.png" />
+    <Content Include="Content\images\out31.png" />
+    <Content Include="Content\images\out310.png" />
+    <Content Include="Content\images\out311.png" />
+    <Content Include="Content\images\out312.png" />
+    <Content Include="Content\images\out313.png" />
+    <Content Include="Content\images\out314.png" />
+    <Content Include="Content\images\out315.png" />
+    <Content Include="Content\images\out316.png" />
+    <Content Include="Content\images\out317.png" />
+    <Content Include="Content\images\out318.png" />
+    <Content Include="Content\images\out319.png" />
+    <Content Include="Content\images\out32.png" />
+    <Content Include="Content\images\out320.png" />
+    <Content Include="Content\images\out321.png" />
+    <Content Include="Content\images\out322.png" />
+    <Content Include="Content\images\out323.png" />
+    <Content Include="Content\images\out324.png" />
+    <Content Include="Content\images\out325.png" />
+    <Content Include="Content\images\out326.png" />
+    <Content Include="Content\images\out327.png" />
+    <Content Include="Content\images\out328.png" />
+    <Content Include="Content\images\out329.png" />
+    <Content Include="Content\images\out33.png" />
+    <Content Include="Content\images\out330.png" />
+    <Content Include="Content\images\out331.png" />
+    <Content Include="Content\images\out332.png" />
+    <Content Include="Content\images\out333.png" />
+    <Content Include="Content\images\out334.png" />
+    <Content Include="Content\images\out335.png" />
+    <Content Include="Content\images\out336.png" />
+    <Content Include="Content\images\out337.png" />
+    <Content Include="Content\images\out338.png" />
+    <Content Include="Content\images\out339.png" />
+    <Content Include="Content\images\out34.png" />
+    <Content Include="Content\images\out340.png" />
+    <Content Include="Content\images\out341.png" />
+    <Content Include="Content\images\out342.png" />
+    <Content Include="Content\images\out343.png" />
+    <Content Include="Content\images\out344.png" />
+    <Content Include="Content\images\out345.png" />
+    <Content Include="Content\images\out346.png" />
+    <Content Include="Content\images\out347.png" />
+    <Content Include="Content\images\out348.png" />
+    <Content Include="Content\images\out349.png" />
+    <Content Include="Content\images\out35.png" />
+    <Content Include="Content\images\out350.png" />
+    <Content Include="Content\images\out351.png" />
+    <Content Include="Content\images\out352.png" />
+    <Content Include="Content\images\out353.png" />
+    <Content Include="Content\images\out354.png" />
+    <Content Include="Content\images\out355.png" />
+    <Content Include="Content\images\out356.png" />
+    <Content Include="Content\images\out357.png" />
+    <Content Include="Content\images\out358.png" />
+    <Content Include="Content\images\out359.png" />
+    <Content Include="Content\images\out36.png" />
+    <Content Include="Content\images\out360.png" />
+    <Content Include="Content\images\out361.png" />
+    <Content Include="Content\images\out362.png" />
+    <Content Include="Content\images\out363.png" />
+    <Content Include="Content\images\out364.png" />
+    <Content Include="Content\images\out365.png" />
+    <Content Include="Content\images\out366.png" />
+    <Content Include="Content\images\out367.png" />
+    <Content Include="Content\images\out368.png" />
+    <Content Include="Content\images\out369.png" />
+    <Content Include="Content\images\out37.png" />
+    <Content Include="Content\images\out370.png" />
+    <Content Include="Content\images\out371.png" />
+    <Content Include="Content\images\out372.png" />
+    <Content Include="Content\images\out373.png" />
+    <Content Include="Content\images\out374.png" />
+    <Content Include="Content\images\out375.png" />
+    <Content Include="Content\images\out376.png" />
+    <Content Include="Content\images\out377.png" />
+    <Content Include="Content\images\out378.png" />
+    <Content Include="Content\images\out379.png" />
+    <Content Include="Content\images\out38.png" />
+    <Content Include="Content\images\out380.png" />
+    <Content Include="Content\images\out381.png" />
+    <Content Include="Content\images\out382.png" />
+    <Content Include="Content\images\out383.png" />
+    <Content Include="Content\images\out384.png" />
+    <Content Include="Content\images\out385.png" />
+    <Content Include="Content\images\out386.png" />
+    <Content Include="Content\images\out387.png" />
+    <Content Include="Content\images\out388.png" />
+    <Content Include="Content\images\out389.png" />
+    <Content Include="Content\images\out39.png" />
+    <Content Include="Content\images\out390.png" />
+    <Content Include="Content\images\out391.png" />
+    <Content Include="Content\images\out392.png" />
+    <Content Include="Content\images\out393.png" />
+    <Content Include="Content\images\out394.png" />
+    <Content Include="Content\images\out395.png" />
+    <Content Include="Content\images\out396.png" />
+    <Content Include="Content\images\out397.png" />
+    <Content Include="Content\images\out398.png" />
+    <Content Include="Content\images\out399.png" />
+    <Content Include="Content\images\out40.png" />
+    <Content Include="Content\images\out400.png" />
+    <Content Include="Content\images\out401.png" />
+    <Content Include="Content\images\out402.png" />
+    <Content Include="Content\images\out403.png" />
+    <Content Include="Content\images\out404.png" />
+    <Content Include="Content\images\out405.png" />
+    <Content Include="Content\images\out406.png" />
+    <Content Include="Content\images\out407.png" />
+    <Content Include="Content\images\out408.png" />
+    <Content Include="Content\images\out409.png" />
+    <Content Include="Content\images\out41.png" />
+    <Content Include="Content\images\out410.png" />
+    <Content Include="Content\images\out411.png" />
+    <Content Include="Content\images\out412.png" />
+    <Content Include="Content\images\out413.png" />
+    <Content Include="Content\images\out414.png" />
+    <Content Include="Content\images\out415.png" />
+    <Content Include="Content\images\out416.png" />
+    <Content Include="Content\images\out417.png" />
+    <Content Include="Content\images\out418.png" />
+    <Content Include="Content\images\out419.png" />
+    <Content Include="Content\images\out42.png" />
+    <Content Include="Content\images\out420.png" />
+    <Content Include="Content\images\out421.png" />
+    <Content Include="Content\images\out422.png" />
+    <Content Include="Content\images\out423.png" />
+    <Content Include="Content\images\out424.png" />
+    <Content Include="Content\images\out425.png" />
+    <Content Include="Content\images\out426.png" />
+    <Content Include="Content\images\out427.png" />
+    <Content Include="Content\images\out428.png" />
+    <Content Include="Content\images\out429.png" />
+    <Content Include="Content\images\out43.png" />
+    <Content Include="Content\images\out430.png" />
+    <Content Include="Content\images\out431.png" />
+    <Content Include="Content\images\out432.png" />
+    <Content Include="Content\images\out433.png" />
+    <Content Include="Content\images\out434.png" />
+    <Content Include="Content\images\out435.png" />
+    <Content Include="Content\images\out436.png" />
+    <Content Include="Content\images\out437.png" />
+    <Content Include="Content\images\out438.png" />
+    <Content Include="Content\images\out439.png" />
+    <Content Include="Content\images\out44.png" />
+    <Content Include="Content\images\out440.png" />
+    <Content Include="Content\images\out441.png" />
+    <Content Include="Content\images\out442.png" />
+    <Content Include="Content\images\out443.png" />
+    <Content Include="Content\images\out444.png" />
+    <Content Include="Content\images\out445.png" />
+    <Content Include="Content\images\out446.png" />
+    <Content Include="Content\images\out447.png" />
+    <Content Include="Content\images\out448.png" />
+    <Content Include="Content\images\out449.png" />
+    <Content Include="Content\images\out45.png" />
+    <Content Include="Content\images\out450.png" />
+    <Content Include="Content\images\out451.png" />
+    <Content Include="Content\images\out452.png" />
+    <Content Include="Content\images\out453.png" />
+    <Content Include="Content\images\out454.png" />
+    <Content Include="Content\images\out455.png" />
+    <Content Include="Content\images\out456.png" />
+    <Content Include="Content\images\out457.png" />
+    <Content Include="Content\images\out458.png" />
+    <Content Include="Content\images\out459.png" />
+    <Content Include="Content\images\out46.png" />
+    <Content Include="Content\images\out460.png" />
+    <Content Include="Content\images\out461.png" />
+    <Content Include="Content\images\out462.png" />
+    <Content Include="Content\images\out463.png" />
+    <Content Include="Content\images\out464.png" />
+    <Content Include="Content\images\out465.png" />
+    <Content Include="Content\images\out466.png" />
+    <Content Include="Content\images\out467.png" />
+    <Content Include="Content\images\out468.png" />
+    <Content Include="Content\images\out469.png" />
+    <Content Include="Content\images\out47.png" />
+    <Content Include="Content\images\out470.png" />
+    <Content Include="Content\images\out471.png" />
+    <Content Include="Content\images\out472.png" />
+    <Content Include="Content\images\out473.png" />
+    <Content Include="Content\images\out474.png" />
+    <Content Include="Content\images\out475.png" />
+    <Content Include="Content\images\out476.png" />
+    <Content Include="Content\images\out477.png" />
+    <Content Include="Content\images\out478.png" />
+    <Content Include="Content\images\out479.png" />
+    <Content Include="Content\images\out48.png" />
+    <Content Include="Content\images\out480.png" />
+    <Content Include="Content\images\out481.png" />
+    <Content Include="Content\images\out482.png" />
+    <Content Include="Content\images\out483.png" />
+    <Content Include="Content\images\out484.png" />
+    <Content Include="Content\images\out485.png" />
+    <Content Include="Content\images\out486.png" />
+    <Content Include="Content\images\out487.png" />
+    <Content Include="Content\images\out488.png" />
+    <Content Include="Content\images\out489.png" />
+    <Content Include="Content\images\out49.png" />
+    <Content Include="Content\images\out490.png" />
+    <Content Include="Content\images\out491.png" />
+    <Content Include="Content\images\out492.png" />
+    <Content Include="Content\images\out493.png" />
+    <Content Include="Content\images\out494.png" />
+    <Content Include="Content\images\out495.png" />
+    <Content Include="Content\images\out496.png" />
+    <Content Include="Content\images\out497.png" />
+    <Content Include="Content\images\out498.png" />
+    <Content Include="Content\images\out499.png" />
+    <Content Include="Content\images\out50.png" />
+    <Content Include="Content\images\out500.png" />
+    <Content Include="Content\images\out501.png" />
+    <Content Include="Content\images\out502.png" />
+    <Content Include="Content\images\out503.png" />
+    <Content Include="Content\images\out504.png" />
+    <Content Include="Content\images\out505.png" />
+    <Content Include="Content\images\out506.png" />
+    <Content Include="Content\images\out507.png" />
+    <Content Include="Content\images\out508.png" />
+    <Content Include="Content\images\out509.png" />
+    <Content Include="Content\images\out51.png" />
+    <Content Include="Content\images\out510.png" />
+    <Content Include="Content\images\out511.png" />
+    <Content Include="Content\images\out512.png" />
+    <Content Include="Content\images\out513.png" />
+    <Content Include="Content\images\out514.png" />
+    <Content Include="Content\images\out515.png" />
+    <Content Include="Content\images\out516.png" />
+    <Content Include="Content\images\out517.png" />
+    <Content Include="Content\images\out518.png" />
+    <Content Include="Content\images\out519.png" />
+    <Content Include="Content\images\out52.png" />
+    <Content Include="Content\images\out520.png" />
+    <Content Include="Content\images\out521.png" />
+    <Content Include="Content\images\out522.png" />
+    <Content Include="Content\images\out523.png" />
+    <Content Include="Content\images\out524.png" />
+    <Content Include="Content\images\out525.png" />
+    <Content Include="Content\images\out526.png" />
+    <Content Include="Content\images\out527.png" />
+    <Content Include="Content\images\out528.png" />
+    <Content Include="Content\images\out529.png" />
+    <Content Include="Content\images\out53.png" />
+    <Content Include="Content\images\out530.png" />
+    <Content Include="Content\images\out531.png" />
+    <Content Include="Content\images\out532.png" />
+    <Content Include="Content\images\out533.png" />
+    <Content Include="Content\images\out54.png" />
+    <Content Include="Content\images\out55.png" />
+    <Content Include="Content\images\out56.png" />
+    <Content Include="Content\images\out57.png" />
+    <Content Include="Content\images\out58.png" />
+    <Content Include="Content\images\out59.png" />
+    <Content Include="Content\images\out6.png" />
+    <Content Include="Content\images\out60.png" />
+    <Content Include="Content\images\out61.png" />
+    <Content Include="Content\images\out62.png" />
+    <Content Include="Content\images\out63.png" />
+    <Content Include="Content\images\out64.png" />
+    <Content Include="Content\images\out65.png" />
+    <Content Include="Content\images\out66.png" />
+    <Content Include="Content\images\out67.png" />
+    <Content Include="Content\images\out68.png" />
+    <Content Include="Content\images\out69.png" />
+    <Content Include="Content\images\out7.png" />
+    <Content Include="Content\images\out70.png" />
+    <Content Include="Content\images\out71.png" />
+    <Content Include="Content\images\out72.png" />
+    <Content Include="Content\images\out73.png" />
+    <Content Include="Content\images\out74.png" />
+    <Content Include="Content\images\out75.png" />
+    <Content Include="Content\images\out76.png" />
+    <Content Include="Content\images\out77.png" />
+    <Content Include="Content\images\out78.png" />
+    <Content Include="Content\images\out79.png" />
+    <Content Include="Content\images\out8.png" />
+    <Content Include="Content\images\out80.png" />
+    <Content Include="Content\images\out81.png" />
+    <Content Include="Content\images\out82.png" />
+    <Content Include="Content\images\out83.png" />
+    <Content Include="Content\images\out84.png" />
+    <Content Include="Content\images\out85.png" />
+    <Content Include="Content\images\out86.png" />
+    <Content Include="Content\images\out87.png" />
+    <Content Include="Content\images\out88.png" />
+    <Content Include="Content\images\out89.png" />
+    <Content Include="Content\images\out9.png" />
+    <Content Include="Content\images\out90.png" />
+    <Content Include="Content\images\out91.png" />
+    <Content Include="Content\images\out92.png" />
+    <Content Include="Content\images\out93.png" />
+    <Content Include="Content\images\out94.png" />
+    <Content Include="Content\images\out95.png" />
+    <Content Include="Content\images\out96.png" />
+    <Content Include="Content\images\out97.png" />
+    <Content Include="Content\images\out98.png" />
+    <Content Include="Content\images\out99.png" />
+    <Content Include="Content\movie\movie.mp4" />
+    <Content Include="favicon.ico" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Global.asax" />
+    <Content Include="Content\Site.css" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <None Include="Scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="Scripts\jquery-1.10.2.js" />
+    <Content Include="Scripts\jquery-1.10.2.min.js" />
+    <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\modernizr-2.6.2.js" />
+    <Content Include="Scripts\respond.js" />
+    <Content Include="Scripts\respond.min.js" />
+    <Content Include="Scripts\_references.js" />
+    <Content Include="Web.config" />
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Views\Web.config" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Shared\Error.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Home\About.cshtml" />
+    <Content Include="Views\Home\Contact.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Account\_ExternalLoginsListPartial.cshtml" />
+    <Content Include="Views\Account\ConfirmEmail.cshtml" />
+    <Content Include="Views\Account\ExternalLoginConfirmation.cshtml" />
+    <Content Include="Views\Account\ExternalLoginFailure.cshtml" />
+    <Content Include="Views\Account\ForgotPassword.cshtml" />
+    <Content Include="Views\Account\ForgotPasswordConfirmation.cshtml" />
+    <Content Include="Views\Account\Login.cshtml" />
+    <Content Include="Views\Account\Register.cshtml" />
+    <Content Include="Views\Account\ResetPassword.cshtml" />
+    <Content Include="Views\Account\ResetPasswordConfirmation.cshtml" />
+    <Content Include="Views\Account\SendCode.cshtml" />
+    <Content Include="Views\Account\VerifyCode.cshtml" />
+    <Content Include="Views\Manage\AddPhoneNumber.cshtml" />
+    <Content Include="Views\Manage\ChangePassword.cshtml" />
+    <Content Include="Views\Manage\Index.cshtml" />
+    <Content Include="Views\Manage\ManageLogins.cshtml" />
+    <Content Include="Views\Manage\SetPassword.cshtml" />
+    <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
+    <Content Include="Views\Shared\Lockout.cshtml" />
+    <Content Include="Views\Shared\_LoginPartial.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="Content\learning\daenerys\" />
+    <Folder Include="Content\learning\missandei\" />
+    <Folder Include="Content\learning\mormont\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="packages.config" />
+    <None Include="Project_Readme.html" />
+    <Content Include="Scripts\jquery-1.10.2.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\HomeWork2.Services\HomeWork2.Services.csproj">
+      <Project>{c88336b2-7078-423f-83ef-68bff479acb7}</Project>
+      <Name>HomeWork2.Services</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>6036</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:6036/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <Import Project="..\packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets" Condition="Exists('..\packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets')" />
+  <Target Name="EnsureBclBuildImported" BeforeTargets="BeforeBuild" Condition="'$(BclBuildImported)' == ''">
+    <Error Condition="!Exists('..\packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets')" Text="This project references NuGet package(s) that are missing on this computer. Enable NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=317567." HelpKeyword="BCLBUILD2001" />
+    <Error Condition="Exists('..\packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets')" Text="The build restored NuGet packages. Build the project again to include these packages in the build. For more information, see http://go.microsoft.com/fwlink/?LinkID=317568." HelpKeyword="BCLBUILD2002" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>
