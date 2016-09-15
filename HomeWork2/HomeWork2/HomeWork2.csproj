@@ -735,7 +735,6 @@
     <Content Include="Content\images\out97.png" />
     <Content Include="Content\images\out98.png" />
     <Content Include="Content\images\out99.png" />
-    <Content Include="Content\movie\movie.mp4" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -794,6 +793,7 @@
     <Folder Include="Content\learning\daenerys\" />
     <Folder Include="Content\learning\missandei\" />
     <Folder Include="Content\learning\mormont\" />
+    <Folder Include="Content\movie\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
