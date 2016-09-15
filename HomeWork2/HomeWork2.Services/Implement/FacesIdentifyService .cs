@@ -1,5 +1,6 @@
 ﻿using HomeWork2.Services.Model;
 using HomeWork2.Services.Utils;
+using Microsoft.ProjectOxford.Common;
 using Microsoft.ProjectOxford.Emotion;
 using Microsoft.ProjectOxford.Emotion.Contract;
 using Microsoft.ProjectOxford.Face;
@@ -134,6 +135,26 @@ namespace HomeWork2.Services.Interface
             }
         }
 
+        private bool CompareFaceRectangles(Rectangle s, FaceRectangle t)
+        {
+            return (s.Height == t.Height) && (s.Left == t.Left) && (s.Top == t.Top) && (s.Width == t.Width);
+        }
+
+        private async Task<IdentifyResult[]> GetidentifyResults(string group, Guid[] faces)
+        {
+            try
+            {
+                // Detect faces in the image and add to Anna
+                var identifyResults = await faceServiceClient.IdentifyAsync(group, faces);
+                await NeedWait(2);
+                return identifyResults;
+            }
+            catch (FaceAPIException ex)
+            {
+                return null;
+            }
+
+        }
         #endregion
 
         public async Task<List<Model.Person>> CreateAndLearnGroup()
@@ -143,52 +164,82 @@ namespace HomeWork2.Services.Interface
 
         public async Task<List<Model.Person>> IdentifyPersons(string imagePath, string personGroupId)
         {
+            var fileName = Path.GetFileName(imagePath);
+
             var list = new List<Model.Person>();
+
             Face[] faces = null;
+
             Emotion[] emotions = null;
 
-            using (Stream s = File.OpenRead(imagePath))
+            //на случай RateException
+            try
             {
-                faces = await faceServiceClient.DetectAsync(s, true, true,
-                   new List<FaceAttributeType> {
+
+                using (Stream s = File.OpenRead(imagePath))
+                {
+                    try
+                    {
+                        faces = await faceServiceClient.DetectAsync(s, true, true,
+                        new List<FaceAttributeType> {
                         FaceAttributeType.Age,
                         FaceAttributeType.FacialHair,
                         FaceAttributeType.Gender,
                         FaceAttributeType.Glasses,
                         FaceAttributeType.HeadPose,
                         FaceAttributeType.Smile });
-            }
-
-            using (Stream s = File.OpenRead(imagePath))
-            {
-                emotions = await emotionServiceClient.RecognizeAsync(s);
-            }
-
-            var faceIds = faces.Select(face => face.FaceId).ToArray();
-
-            var identifyResults = await faceServiceClient.IdentifyAsync(personGroupId, faceIds);
-
-            foreach (var identifyResult in identifyResults)
-            {
-                if (identifyResult.Candidates.Length != 0)
-                {
-                    var currentFace = faces.FirstOrDefault(w => w.FaceId == identifyResult.FaceId);
-
-                    // Get top 1 among all candidates returned
-                    var candidateId = identifyResult.Candidates[0].PersonId;
-                    var person = await faceServiceClient.GetPersonAsync(personGroupId, candidateId);
-
-
-                    list.Add(new Model.Person(candidateId, personGroupId) { Name = person.Name });
-
+                        await NeedWait(2);
+                    }
+                    catch (FaceAPIException ex)
+                    {
+                        return list;
+                    }
                 }
-            }
-            await NeedWait(2);
 
+                using (Stream s = File.OpenRead(imagePath))
+                {
+                    emotions = await emotionServiceClient.RecognizeAsync(s);
+                    await NeedWait(2);
+                }
+                if (faces == null || faces.Count() == 0)
+                    return list;
+
+                var faceIds = faces.Select(face => face.FaceId).ToArray();
+
+                var identifyResults = await GetidentifyResults(personGroupId, faceIds);
+
+                if (identifyResults != null)
+                    foreach (var identifyResult in identifyResults)
+                    {
+                        if (identifyResult.Candidates.Length != 0)
+                        {
+                            var currentFace = faces.FirstOrDefault(w => w.FaceId == identifyResult.FaceId);
+
+                            var currentEmotion = emotions.FirstOrDefault(w => CompareFaceRectangles(w.FaceRectangle, currentFace.FaceRectangle));
+
+                            var candidateId = identifyResult.Candidates[0].PersonId;
+
+                            var person = await faceServiceClient.GetPersonAsync(personGroupId, candidateId);
+
+                            list.Add(new Model.Person(candidateId, personGroupId, person.Name, currentEmotion, fileName));
+
+                            await NeedWait(2);
+                        }
+                    }
+                await NeedWait(5);
+            }
+            catch (FaceAPIException ex)
+            {
+                await NeedWait(10);
+            }
             return list;
 
         }
 
-
+        public async Task<bool> ChekGroupHasLearn(string personGroupId)
+        {
+            var status = await CheckGroupTrainingStatus(personGroupId);
+            return (status != null) && status.Status != Status.Failed;
+        }
     }
 }

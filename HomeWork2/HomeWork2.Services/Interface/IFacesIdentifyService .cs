@@ -14,5 +14,6 @@ namespace HomeWork2.Services.Interface
 
         Task<List<Person>> IdentifyPersons(string imagePath, string personGroupId);
 
+        Task<bool> ChekGroupHasLearn(string personGroupId);
     }
 }

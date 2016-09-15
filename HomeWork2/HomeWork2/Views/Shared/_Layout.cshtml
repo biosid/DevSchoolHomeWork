@@ -7,6 +7,11 @@
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
 
+    <link href="//kendo.cdn.telerik.com/2016.3.914/styles/kendo.common-fiori.min.css" rel="stylesheet" />
+    <link href="//kendo.cdn.telerik.com/2016.3.914/styles/kendo.rtl.min.css" rel="stylesheet" />
+    <link href="//kendo.cdn.telerik.com/2016.3.914/styles/kendo.fiori.min.css" rel="stylesheet" />
+    <link href="//kendo.cdn.telerik.com/2016.3.914/styles/kendo.fiori.mobile.min.css" rel="stylesheet" />
+
 </head>
 <body>
     <div class="navbar navbar-inverse navbar-fixed-top">
@@ -40,5 +45,144 @@
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
     @RenderSection("scripts", required: false)
+    <script src="//kendo.cdn.telerik.com/2016.3.914/js/jszip.min.js"></script>
+    <script src="//kendo.cdn.telerik.com/2016.3.914/js/kendo.all.min.js"></script>
+    <script src="//kendo.cdn.telerik.com/2016.3.914/js/kendo.timezones.min.js"></script>
+
+
+    <script>
+
+        $(function () {
+
+            RefreshStatistic();
+            var popupNotification = $("#popupNotification").kendoNotification().data("kendoNotification");
+
+            $("#CheckGroupStatus").click(function () {
+
+                $.ajax({
+                    url: '@Url.Action("CheckGroupHasLearn")',
+                    dataType: "json",
+                    type: "post",
+                    success: function (data) {
+                        console.log(data);
+                        if (data)
+                            popupNotification.show("Группа лиц была успешно обучена раннее", "info");
+                    },
+                    error: function () {
+
+                        popupNotification.show("Произошла ошибка", "error");
+
+                    }
+                });
+
+            });
+            $("#LearnGroup").click(function () {
+
+                $.ajax({
+                    url: '@Url.Action("LearnGroup")',
+                    dataType: "json",
+                    type: "post",
+                    success: function (data) {
+                        console.log(data);
+                        if (data)
+                            popupNotification.show("Переобучение было выполенно успешно", "info");
+                    },
+                    error: function () {
+
+                        popupNotification.show("Произошла ошибка", "error");
+
+                    }
+                });
+
+            });
+            $("#RefreshStatistic").click(function () {
+                RefreshStatistic();
+            });
+
+            function RefreshStatistic() {
+                $.ajax({
+                    url: '@Url.Action("RefresStatistic")',
+                    dataType: "json",
+                    type: "post",
+                    success: function (data) {
+                        console.log(data);
+                        createChart("#daenerysGrid", data.daenerys, "Daenerys");
+                        createChart("#missandeiGrid", data.missandei, "Missandei");
+                        createChart("#mormontGrid", data.mormont, "Mormont");
+                    },
+                    error: function () {
+
+                        popupNotification.show("Произошла ошибка при обновлении статистики", "error");
+
+                    }
+                });
+                function createChart(chartName, dataChart, personName) {
+                    $(chartName).kendoChart({
+                        dataSource: {
+                            data: dataChart
+                        },
+                        title: {
+                            text: personName + " emmotions"
+                        },
+                        legend: {
+                            visible: true
+                        },
+                        seriesDefaults: {
+                            type: "line",
+                            labels: {
+                                visible: true,
+                                format: "{0}",
+                                background: "transparent"
+                            }
+                        },
+                        series: [{
+                            field: "Emotion.Scores.Anger",
+                            name: "Anger"
+                        }, {
+                            field: "Emotion.Scores.Contempt",
+                            name: "Contempt"
+                        }, {
+                            field: "Emotion.Scores.Disgust",
+                            name: "Disgust"
+                        }, {
+                            field: "Emotion.Scores.Fear",
+                            name: "Fear"
+                        }, {
+                            field: "Emotion.Scores.Happiness",
+                            name: "Happiness"
+                        }, {
+                            field: "Emotion.Scores.Neutral",
+                            name: "Neutral"
+                        }, {
+                            field: "Emotion.Scores.Sadness",
+                            name: "Sadness"
+                        }, {
+                            field: "Emotion.Scores.Surprise",
+                            name: "Surprise"
+                        }],
+                        valueAxis: {
+                            labels: {
+                                format: "{0}"
+                            },
+                            line: {
+                                visible: false
+                            }
+                        },
+                        categoryAxis: {
+                            field: "ImageFileName",
+                            majorGridLines: {
+                                visible: false
+                            }
+                        }
+                    });
+                }
+
+            }
+
+        });
+
+    </script>
+
+
 </body>
 </html>
